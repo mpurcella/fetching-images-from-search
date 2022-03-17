@@ -181,8 +181,9 @@ table {
   background-color: transparent;
   padding: 10px 15px;
   border: 2px solid rgba(0, 217, 255, 0.5);
-  box-sizing: border-box;
+  border-radius: 0;
   outline: none;
+  box-sizing: border-box;
   margin-right: 20px;
 }
 .app .search-form .search-input:focus {
@@ -203,6 +204,7 @@ table {
   background-color: transparent;
   padding: 0 40px;
   border: 2px solid rgba(0, 217, 255, 0.5);
+  outline: none;
   transition: all 0.3s;
 }
 .app .search-form .search-button:hover {
@@ -210,6 +212,9 @@ table {
   background-color: #00d9ff;
   border-color: #00d9ff;
   cursor: pointer;
+}
+.app .search-form .search-button:focus {
+  border-color: #00d9ff;
 }
 @media (max-width: 576px) {
   .app .search-form .search-button {
