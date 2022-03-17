@@ -180,10 +180,13 @@ table {
   color: white;
   background-color: transparent;
   padding: 10px 15px;
-  border: 2px solid #00ffaa;
+  border: 2px solid rgba(0, 217, 255, 0.5);
   box-sizing: border-box;
   outline: none;
   margin-right: 20px;
+}
+.app .search-form .search-input:focus {
+  border-color: #00d9ff;
 }
 @media (max-width: 576px) {
   .app .search-form .search-input {
@@ -199,12 +202,13 @@ table {
   color: white;
   background-color: transparent;
   padding: 0 40px;
-  border: 2px solid #00ffaa;
+  border: 2px solid rgba(0, 217, 255, 0.5);
   transition: all 0.3s;
 }
 .app .search-form .search-button:hover {
   color: black;
-  background-color: #00ffaa;
+  background-color: #00d9ff;
+  border-color: #00d9ff;
   cursor: pointer;
 }
 @media (max-width: 576px) {
@@ -222,6 +226,7 @@ table {
   width: 48%;
   margin-bottom: 20px;
   border: 1px solid black;
+  box-sizing: border-box;
 }
 @media (max-width: 768px) {
   .app .images .image {

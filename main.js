@@ -19,9 +19,11 @@ async function loadBySearch() {
 // Renders the images dynamically from the data received
 function createImages(images) {
 	document.querySelector('.images').innerHTML = `
-    ${images.map((image) => {
-		return `<img class="image" src="${image.webformatURL}" alt="${image.tags}" />`;
-	})}
+    ${images
+		.map((image) => {
+			return `<img class="image" src="${image.webformatURL}" alt="${image.tags}" />`;
+		})
+		.join('')}
     `;
 }
 
