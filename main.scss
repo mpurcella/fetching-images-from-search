@@ -133,6 +133,7 @@ table {
 	flex-direction: column;
 	align-items: center;
 	padding: 0 15px;
+	position: relative;
 
 	.heading {
 		padding: 30px 0 40px;
@@ -175,7 +176,7 @@ table {
 			color: white;
 			background-color: transparent;
 			padding: 10px 15px;
-			border: 2px solid rgba(0, 217, 255, 0.5);
+			border: 2px solid darken(rgb(0, 217, 255), 25%);
 			border-radius: 0;
 			outline: none;
 			box-sizing: border-box;
@@ -199,7 +200,7 @@ table {
 			color: white;
 			background-color: transparent;
 			padding: 0 40px;
-			border: 2px solid rgba(0, 217, 255, 0.5);
+			border: 2px solid darken(rgb(0, 217, 255), 25%);
 			outline: none;
 			transition: all 0.3s;
 
@@ -235,6 +236,38 @@ table {
 			@media (max-width: 768px) {
 				width: 100%;
 			}
+		}
+	}
+
+	.scroll-button {
+		font-size: 20px;
+		color: white;
+		background-color: black;
+		padding: 10px 15px;
+		border: 2px solid darken(rgb(0, 217, 255), 25%);
+		border-radius: 50%;
+		outline: none;
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.3s;
+
+		&:hover {
+			color: black;
+			background-color: rgb(0, 217, 255);
+			border-color: rgb(0, 217, 255);
+			cursor: pointer;
+		}
+
+		&:focus {
+			border-color: rgb(0, 217, 255);
+		}
+
+		&.visible {
+			visibility: visible;
+			opacity: 1;
 		}
 	}
 }
