@@ -13,7 +13,7 @@ async function loadBySearch() {
 			`https://pixabay.com/api/?key=21484393-fe2bda1207e80c999410f0783&q=${inputValue}&image_type=photo&orientation=horizontal&per_page=200`
 		);
 		let data = await response.json();
-		showingResults(inputValue);
+		showingResultsFor(inputValue);
 		createImages(data.hits);
 		clearInput();
 	} catch (error) {
@@ -22,7 +22,7 @@ async function loadBySearch() {
 }
 
 // Creates 'Showing Results For:' text
-function showingResults(inputText) {
+function showingResultsFor(inputText) {
 	document.querySelector('.showing-results').innerHTML = `
 		<p class="showing-results-text">Showing Results For: 
 			<span>${inputText}</span>
