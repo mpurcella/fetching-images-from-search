@@ -3,17 +3,21 @@ let searchForm = document.querySelector('.search-form');
 searchForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 	loadBySearch();
-	clearInput();
 });
 
 // Fetches API data using the value of the input entered by the user
 async function loadBySearch() {
 	let inputValue = document.querySelector('.search-input').value;
-	let response = await fetch(
-		`https://pixabay.com/api/?key=21484393-fe2bda1207e80c999410f0783&q=${inputValue}&image_type=photo&orientation=horizontal&per_page=200`
-	);
-	let data = await response.json();
-	createImages(data.hits);
+	try {
+		let response = await fetch(
+			`https://pixabay.com/api/?key=21484393-fe2bda1207e80c999410f0783&q=${inputValue}&image_type=photo&orientation=horizontal&per_page=200`
+		);
+		let data = await response.json();
+		createImages(data.hits);
+		clearInput();
+	} catch (error) {
+		console.log('Error: ' + error);
+	}
 }
 
 // Renders the images dynamically from the data received
