@@ -159,7 +159,7 @@ table {
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		margin-bottom: 60px;
+		margin-bottom: 40px;
 
 		@media (max-width: 576px) {
 			flex-direction: column;
@@ -217,6 +217,22 @@ table {
 
 			@media (max-width: 576px) {
 				padding: 10px 40px;
+			}
+		}
+	}
+
+	.showing-results {
+		margin-bottom: 40px;
+
+		&-text {
+			font-family: 'Roboto', sans-serif;
+			font-size: 18px;
+			font-weight: 100;
+			color: white;
+			text-transform: uppercase;
+
+			span {
+				font-weight: 500;
 			}
 		}
 	}

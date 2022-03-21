@@ -163,7 +163,7 @@ table {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 @media (max-width: 576px) {
   .app .search-form {
@@ -221,6 +221,19 @@ table {
   .app .search-form .search-button {
     padding: 10px 40px;
   }
+}
+.app .showing-results {
+  margin-bottom: 40px;
+}
+.app .showing-results-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  color: white;
+  text-transform: uppercase;
+}
+.app .showing-results-text span {
+  font-weight: 500;
 }
 .app .images {
   width: 100%;
