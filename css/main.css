@@ -243,6 +243,8 @@ table {
 }
 .app .images .image {
   width: 48%;
+  max-height: 400px;
+  object-fit: cover;
   margin-bottom: 20px;
   border: 1px solid black;
   box-sizing: border-box;
@@ -250,6 +252,7 @@ table {
 @media (max-width: 768px) {
   .app .images .image {
     width: 100%;
+    max-height: unset;
   }
 }
 .app .scroll-button {
